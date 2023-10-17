@@ -2,10 +2,10 @@ const postgres = require('postgres');
 const pg = require('pg');
 require('dotenv').config();
 
-  var username = process.env.USE;
-  var password = process.env.PASSWORD;
-  var database = process.env.DATABASE;
-  var host = process.env.HOST;
+  var username = process.env.USUARIO;
+  var password = process.env.SENHA;
+  var database = process.env.BASEDEDADOS;
+  var host = process.env.HOSTE;
   var dialect = process.env.DIALECT;
 
   const config = {
