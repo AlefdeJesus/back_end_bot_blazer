@@ -8,7 +8,8 @@ class resultadoController {
     try {
       const sinais = await Sinais.findAll({
         order: [
-          ['hora','DESC'],
+          ['data', 'DESC'],
+          ['hora', 'DESC']
         ],
       });
         return res.status(200).json(sinais);
