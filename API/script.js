@@ -5,12 +5,8 @@ const sequelize = require('sequelize');
 const {Sinais} = require('./models');
 
 const arrayResultado = [];
-async function realizarScraping() {
-  const browser = await puppeteer.launch({
-    executablePath: '/usr/bin/google-chrome', // Caminho para o Chrome no ambiente Vercel
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    headless: true,
-  });
+async function realizarScraping(cor, numero) {
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   await page.goto('https://blaze-4.com/pt/games/double', { timeout: 60000 });
