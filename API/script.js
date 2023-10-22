@@ -1,10 +1,8 @@
 // puppeteerScraping.js
 const puppeteer = require('puppeteer');
-//const salvarCorNoBanco = require('./scripts/salvarNoBanco.js');
 const sequelize = require('sequelize');
 const {Sinais} = require('./models');
 
-const arrayResultado = [];
 async function realizarScraping(cor, numero) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -40,8 +38,6 @@ async function realizarScraping(cor, numero) {
       lastNumero = resultado.numero;
       console.log(`Saiu ${resultado.cor} ${resultado.numero} -- ${data} ${hora}`);
 
-      arrayResultado.push({lastCor, lastNumero, data,hora });
-
    function salvarCorNoBanco(){
       
             Sinais.create({
@@ -65,4 +61,4 @@ async function realizarScraping(cor, numero) {
 }
 
 
-module.exports = { realizarScraping, arrayResultado };
+module.exports = { realizarScraping};
