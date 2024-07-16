@@ -2,7 +2,7 @@
 # Para iniciar a API, execute o seguinte comando no terminal:
 * npm start
 # Problema de Cores Repetidas
-Um desafio específico que a API enfrenta ocorre quando o site da Blaze apresenta duas cores com a mesma numeração consecutivamente. Nesse cenário, somente uma das cores é salva no banco de dados e registrada no console do terminal.
+Um desafio específico que a API enfrenta ocorre quando o site da Blaze apresenta duas cores com a mesma numeração repetida. Nesse cenário, somente uma das cores é salva no banco de dados e registrada no console do terminal.
 
 # FrontEnd de Demonstração
 Foi criado um frontend muito simples para demonstrar como consumir a API. O código-fonte do frontend está disponível [aqui](https://github.com/AlefdeJesus/Front_End_BOT_blazer).
